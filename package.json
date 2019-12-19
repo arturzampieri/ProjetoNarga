@@ -1,0 +1,25 @@
+{
+  "name": "findhookah",
+  "version": "1.0.0",
+  "description": "Crud utilizando mongodb e fastify ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./node_modules/nodemon/bin/nodemon.js index.js"
+  },
+  "author": "Artur Zampieri",
+  "license": "ISC",
+  "dependencies": {
+    "boom": "^7.2.2",
+    "fastify": "^1.13.0",
+    "fastify-mongodb": "^2.0.0",
+    "fastify-register-routes": "^1.1.2",
+    "fastify-swagger": "^0.15.3",
+    "mongodb": "^3.4.0",
+    "mongoose": "^5.3.14",
+    "nodemon": "^1.19.4"
+  }
+}
+
+
+ 
