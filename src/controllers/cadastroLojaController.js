@@ -8,7 +8,6 @@ const CadastroLoja = require('../models/Loja.js')
 exports.getLojas = async (req, reply) => {
   try {
     const lojas = await CadastroLoja.find()
-    console.log("verificando o reply", reply)
     let retorno = {
       "status": reply.res.statusCode,
       "message":"Efetuado a consulta com sucesso",
