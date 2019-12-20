@@ -8,10 +8,11 @@ const CadastroLoja = require('../models/Loja.js')
 exports.getLojas = async (req, reply) => {
   try {
     const lojas = await CadastroLoja.find()
-    console.log("verificando o reply", reply.res.statusCode)
+    console.log("verificando o reply", reply)
     let retorno = {
       "status": reply.res.statusCode,
-      "message":"Efetuado a consulta com sucesso"
+      "message":"Efetuado a consulta com sucesso",
+      "lojas" : lojas
     }
     return retorno;
   } catch (err) {
@@ -24,7 +25,12 @@ exports.getLojaById = async (req, reply) => {
   try {
     const id = req.params.id
     const loja = await CadastroLoja.findById(id)
-    return loja
+    let retorno = {
+      "status": reply.res.statusCode,
+      "message":"Efetuado a consulta com sucesso",
+      "loja" : loja
+    }
+    return retorno
   } catch (err) {
     throw boom.boomify(err)
   }
